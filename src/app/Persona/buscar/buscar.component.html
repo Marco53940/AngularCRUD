@@ -1,0 +1,29 @@
+<div class="container col-md-6">
+    <div class="card">
+        <div class="card-header">
+            <h3>
+                Buscar Personas
+            </h3>
+            <div class="card-body">
+                <form action="">
+                    
+                    <div class="form-group">
+                        <label for="">Numero Documento:</label>
+                        
+                        <input [(ngModel)]="persona.numeroDocumento" name="numeroDocumento" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Tipo Documento:</label>
+                        <select [(ngModel)]="persona.tipoDocumento" name="tipoDocumento" name="tipoDoc" class="form-control">
+                            <option value="DNI">DNI</option>
+                            <option value="Pasaporte">Pasaporte</option>
+                            <option value="Cedula">Cedula</option>
+                        </select>
+                        
+                    </div>
+                    <button  class="btn btn-danger" style="margin-top: 20px;">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
