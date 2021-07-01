@@ -8,6 +8,7 @@ import { EditarComponent } from './Persona/editar/editar.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { BuscarComponent } from './Persona/buscar/buscar.component';
+import { ListarUnoComponent } from './Persona/listar-uno/listar-uno.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { BuscarComponent } from './Persona/buscar/buscar.component';
     ListarComponent,
     AddComponent,
     EditarComponent,
-    BuscarComponent
+    BuscarComponent,
+    ListarUnoComponent
   ],
   imports: [
     BrowserModule,

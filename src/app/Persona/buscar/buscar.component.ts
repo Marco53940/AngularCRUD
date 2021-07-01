@@ -17,4 +17,17 @@ export class BuscarComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  Buscar(persona){
+
+  this.service.buscarPersona(persona)
+  .subscribe(data=>{
+    this.persona=data;
+    alert("Se Encontro con id="+persona.idPersona.toString());
+    localStorage.setItem('persona', JSON.stringify(this.persona));
+    
+  });
+  this.router.navigate(["listar-uno"]);
+  
+  }
+
 }

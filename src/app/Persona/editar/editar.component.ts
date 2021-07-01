@@ -30,7 +30,7 @@ Actualizar(persona:Persona){
   .subscribe(data=>{
     this.persona=data;
     alert("Se Actualizo con Exito...!!!");
-    this.router.navigate(["listar"]);
+    this.router.navigate(["editar"]);
   });
 }
 }
