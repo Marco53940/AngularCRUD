@@ -15,6 +15,7 @@ export class BuscarComponent implements OnInit {
   constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit(): void {
+<<<<<<< HEAD
     //alert("buscar");
   }
 
@@ -33,6 +34,8 @@ export class BuscarComponent implements OnInit {
   //alert("Buscando Persona");
   
   
+=======
+>>>>>>> fb35f6ba0a12a4d538bc05bcd43593b4d6244ecb
   }
 
 }
