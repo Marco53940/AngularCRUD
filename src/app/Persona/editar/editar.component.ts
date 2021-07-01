@@ -30,7 +30,8 @@ Actualizar(persona:Persona){
   .subscribe(data=>{
     this.persona=data;
     alert("Se Actualizo con Exito...!!!");
-    this.router.navigate(["editar"]);
+    localStorage.setItem("id2", this.persona.idPersona.toString());
+    this.router.navigate(["listar-uno"]);
   });
 }
 }

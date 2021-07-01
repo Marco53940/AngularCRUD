@@ -15,18 +15,23 @@ export class BuscarComponent implements OnInit {
   constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit(): void {
+    //alert("buscar");
   }
 
   Buscar(persona){
-
+    console.log(persona);
   this.service.buscarPersona(persona)
   .subscribe(data=>{
     this.persona=data;
-    alert("Se Encontro con id="+persona.idPersona.toString());
-    localStorage.setItem('persona', JSON.stringify(this.persona));
-    
-  });
-  this.router.navigate(["listar-uno"]);
+    console.log("data persona recibida");
+    console.log(data);
+    localStorage.setItem("id2", this.persona.idPersona.toString());
+    this.router.navigate(["listar-uno"]);
+  },error => {
+    alert("No se encuentran datos");
+});
+  //alert("Buscando Persona");
+  
   
   }
 

@@ -18,8 +18,19 @@ export class AddComponent implements OnInit {
   Guardar(){
     this.service.createPersona(this.persona).subscribe(data=>{
       alert("Se Agrego con Exito..!!");
-      this.router.navigate(["listar"]);
+      localStorage.setItem("id2", this.persona.idPersona.toString());
+      //this.router.navigate(["listar-uno"]);
     });
+    this.service.buscarPersona(this.persona)
+    .subscribe(data=>{
+      this.persona=data;
+      console.log("data persona recibida");
+      console.log(data);
+      localStorage.setItem("id2", this.persona.idPersona.toString());
+      this.router.navigate(["listar-uno"]);
+    },error => {
+      alert("No se encuentran datos");
+  });
   }
 
 }

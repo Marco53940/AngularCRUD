@@ -14,20 +14,23 @@ export class ListarUnoComponent implements OnInit {
   constructor(private router:Router, private service:ServiceService) { }
 
   ngOnInit(): void {
+   // alert("listar");
     this.Cargar();
-    this.persona = JSON.parse(localStorage.getItem('persona'));
+    
   }
 
 Cargar(){
- // let id=localStorage.getItem("id");
- // this.service.getPersonaId(+id)
- // .subscribe(data=>{
- //   this.persona=data;
- // });
+  let id=localStorage.getItem("id2");
+  this.service.getPersonaId(+id)
+  .subscribe(data=>{
+    this.persona=data;
+    //alert("data  id recibida");
+    console.log("data  id recibida");
+  });
 }
 
 Editar(persona:Persona){
-  localStorage.setItem("id", persona.idPersona.toString());
+  localStorage.setItem("id2", persona.idPersona.toString());
   this.router.navigate(["editar"]);
 }
 }
