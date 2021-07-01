@@ -18,7 +18,7 @@ export class AddComponent implements OnInit {
   Guardar(){
     this.service.createPersona(this.persona).subscribe(data=>{
       alert("Se Agrego con Exito..!!");
-      localStorage.setItem("id2", this.persona.idPersona.toString());
+      //localStorage.setItem("id2", this.persona.idPersona.toString());
       //this.router.navigate(["listar-uno"]);
     });
     this.service.buscarPersona(this.persona)
